@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="welcome">
+  <p>Welcome back to login your account</p>
+
+  <img src="assets/download.jpg" alt="download-logo">
+</div>
+    <ion-item>
+      <ion-select okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="+351">+351</ion-select-option>
+        <ion-select-option value="+91">+91</ion-select-option>
+      </ion-select>
+      <ion-input *ngIf="!otpsend" type="number" [(ngModel)]="user.phone" placeholder="Enter Phone number"> 
+      </ion-input>
+      <ion-input *ngIf="otpsend" type="text" [(ngModel)]="otp" placeholder="Enter the OTP"> 
+        </ion-input>
+    </ion-item>
+    <div id="recaptcha-container" class="ion-padding-top" style="display: none;">
+    </div>
+    <br>
+    <div>
+      <ion-item color="tertiary">
+        <ion-button  *ngIf="otpsend" (click)="verifyotp()">verifyotp</ion-button>
+        <ion-button *ngIf="!otpsend" (click)="Otp()">Send OTP</ion-button>
+      </ion-item>
+    </div>
+ </ion-content>

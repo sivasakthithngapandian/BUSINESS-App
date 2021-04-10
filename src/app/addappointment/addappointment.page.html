@@ -1,0 +1,22 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+  <ion-back-button text="">
+    <ion-title>Book an appointment</ion-title>
+  </ion-back-button>
+</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="title" padding-horizontal>
+
+  </div>
+  <h5 style="margin-top: 0 !important;">Pick Date</h5>
+  <ion-col size="12">
+    <div class="calender-holder">
+      <!-- <ion-calendar [(ngModel)]="date" [type]="type" [format]="'YYYY-MM-DD'"> -->
+      <ion-calendar [(ngModel)]="date">
+      </ion-calendar>
+    </div>
+</ion-content>

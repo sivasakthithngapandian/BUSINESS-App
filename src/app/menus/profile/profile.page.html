@@ -1,0 +1,82 @@
+<ion-content>
+  <ion-content>
+    <div class="top">
+      <div class="img-background"></div>
+      <ion-item class="profile-item" lines="none">
+        <ion-avatar>
+          <img src="assets/imgs/ion-wizard.png" alt="">
+        </ion-avatar>
+        <ion-label>
+          <h1>Ion Wizard</h1>
+          <p>pdmproject2017wd1@gmail.com</p>
+        </ion-label>
+      </ion-item>
+    </div>
+    <div class="btn-holder">
+      <ion-button id="edit-btn" shape="round">
+        Edit
+      </ion-button>
+      <ion-button id="share-btn">
+        <ion-icon slot="icon-only" name="md-share"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="count-holder" padding text-center>
+      <ion-row>
+        <ion-col size="6" class="bcols">
+          <h5>10</h5>
+          <p>Services</p>
+        </ion-col>
+        <ion-col size="6" class="bcols">
+          <h5>5</h5>
+          <p>Orders</p>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="settings-list">
+  
+      <ion-item>
+        <div class="thumb" slot="start">
+          <img src="assets/imgs/settingsicns/icn-chat.svg" alt="">
+        </div>
+        <ion-label>Chat</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <div class="thumb" slot="start">
+          <img src="assets/imgs/settingsicns/icn-privacy.svg" alt="">
+        </div>
+        <ion-label>Privacy</ion-label>
+      </ion-item>
+      <ion-item>
+        <div class="thumb" slot="start">
+          <img src="assets/imgs/settingsicns/icn-security.svg" alt="">
+        </div>
+        <ion-label>Security</ion-label>
+      </ion-item>
+      <ion-item>
+        <div class="thumb" slot="start">
+          <img src="assets/imgs/settingsicns/icn-notifications.svg" alt="">
+        </div>
+        <ion-label>Notifications</ion-label>
+      </ion-item>
+      <ion-item>
+        <div class="thumb" slot="start">
+          <img src="assets/imgs/settingsicns/icn-payments.svg" alt="">
+        </div>
+        <ion-label>Payments</ion-label>
+      </ion-item>
+      <ion-item>
+        <div class="thumb" slot="start">
+          <img src="assets/imgs/settingsicns/icn-languages.svg" alt="">
+        </div>
+        <ion-label>Languages</ion-label>
+      </ion-item>
+      <ion-item (click)="logout()">
+          <div class="thumb" slot="start">
+            <img src="assets/imgs/settingsicns/icn-logout.svg" alt="">
+          </div>
+          <ion-label>Logout</ion-label>
+        </ion-item>
+    </div>
+  
+  </ion-content>

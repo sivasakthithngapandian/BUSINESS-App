@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons><ion-menu-button menu="main-menu"></ion-menu-button>   
+    <ion-title calss="ion-text-align-center : ion-margin-top : 16px">
+      HOME
+    </ion-title>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="assets/imges/photo1.jpg" width="220px">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="assets/photos/images2.jpg" width="220px">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="assets/photos/images3.jpg" style="width:100px">
+      <div class="text">Caption Three</div>
+    </div>
+  </div>
+  <br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+    
+<div>
+<ion-tabs>
+<ion-tab-bar slot="bottom" color="secondary">
+    <ion-tab-button tab="business">
+      <ion-icon name="business" color="danger"></ion-icon>
+<ion-label>
+</ion-label>
+</ion-tab-button>
+  <ion-tab-button tab="appointment">
+    <ion-icon name="people-circle-outline" color="danger" ></ion-icon>
+<ion-label>
+</ion-label>
+</ion-tab-button>
+  <ion-tab-button tab="staff">
+    <ion-icon name="person-add-outline" color="danger"></ion-icon>
+<ion-label>
+</ion-label>
+</ion-tab-button>
+</ion-tab-bar>
+</ion-tabs>
+</div>
+</ion-content>

@@ -1,0 +1,125 @@
+ion-content
+{
+    --background: #FAFBFC;
+    .vl {
+        border-left: 6px solid green;
+        height: 10px;
+      }
+    .sections-holder
+    {
+        .section
+        {
+            background: white;
+            ion-item{
+                h1,h5{
+                    display: inline-block !important;
+                }
+                --background:transparent;
+                h5{
+                    font-size: 1.2rem !important;
+                    span{
+                        font-size: 0.8rem !important;
+                    }
+                }
+               
+                ion-radio{
+                    height: 18px !important;
+                    width: 18px !important;
+                    border: 1px solid var(--ion-color-primary) !important;
+                    --color-checked: var(--ion-color-primary);
+                }
+
+              
+            }
+
+            .description
+            {
+                padding: 0 16px 16px 16px !important;
+                p{
+                    margin: 0 !important;
+                }
+            }
+           
+        }
+    }
+
+    .progress-holder
+    {
+        
+    .status {
+        padding: 10px 10px 0 10px;
+        font-size: 1rem;
+        span {
+            display: block;
+            position: relative;
+            margin-bottom: .5rem;
+            color: #777;
+            font-size: 0.8rem;
+        }
+        ion-icon {
+            font-size: 1.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            display: block;
+            margin: auto;
+            margin-bottom: .7rem;
+            
+        }
+        
+        .processing
+            {
+            position: relative;
+            ion-icon {
+                color: var(--ion-color-primary);
+                position: relative;
+                z-index: 2;
+                color: white !important
+                ;
+            }
+        }
+        .processing  {
+            color: #000;
+            &.processing-active {
+                ion-icon{
+                    color: var(--ion-color-primary) !important;
+                }
+            }
+        }
+        
+        .processing::after
+        {
+            content: '';
+            display: block;
+            position: absolute;
+            width: calc(100% - 0.1rem);
+            height: 1px;
+            top: 15px;
+            margin-bottom: auto;
+            z-index: 1;
+        }
+        .processing:nth-last-child(1) {
+            
+            &.processing::after {
+               display: none;
+            }
+          } 
+        .processing::after {
+            background: var(--ion-color-primary);
+            right: calc(-50% + .5rem);
+        }
+     
+    }
+}
+
+  .processing-active {
+    ion-icon{
+        color: var(--ion-color-primary);
+    }
+}
+
+    ion-slides
+    {
+        height: 100% !important;
+        width: 100% !important;
+    }
+}

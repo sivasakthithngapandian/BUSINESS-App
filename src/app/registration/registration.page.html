@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="success">   
+    <ion-buttons>
+ <ion-back-button text=""></ion-back-button>
+ <ion-title>Registration</ion-title>  
+</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [scrollEvents]="true" (ionScroll)=onScroll($event)>
+
+  <div>
+    <ion-item >
+      <ion-label position="floating">Business name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+  <ion-icon name="globe-outline"></ion-icon>
+  <ion-input autocapitalize="Businessname.booky.com" pattern="Businessname.booksy.com" placeholder="public profile"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Location</ion-label>
+    <ion-input></ion-input>
+  
+  <!--geolocation-->
+
+  <ion-button (click)="getGeolocation()" color="primary" expand="full">Get Location</ion-button>
+  
+  <!--geo address--> 
+</ion-item>
+  <ion-item>
+    <ion-label position="floating" required>Email</ion-label>
+    <ion-input required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">phone</ion-label>
+  <ion-input></ion-input>
+  </ion-item>
+  </div>
+<div>
+  <ion-list>
+  <ion-item>
+    <ion-checkbox color="dark" checked slot="start"></ion-checkbox>
+  <ion-label>Barbershop</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox color="dark" checked slot="start"></ion-checkbox>
+  <ion-label>Ladies beauty parlour</ion-label>
+  </ion-item>
+</ion-list>
+</div>
+
+<div>
+  <ion-input>
+  <ion-label>Opening hours</ion-label>
+  <ion-item>
+    <ion-select slot="end"> 
+    <ion-select-option>10am-7pm</ion-select-option>
+    <ion-select-option>8pm-4am</ion-select-option>
+    </ion-select>
+  </ion-item>
+  </ion-input>
+</div>
+  <ion-item>
+    <ion-button expand="block" color="secondary" (click)="register()">Create your Account</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button expand="block" color="medium" (click)="skip()">skip</ion-button>
+  </ion-item>
+  <ion-item>
+  <ion-button (click) ="logout()">Logout</ion-button>
+</ion-item>
+
+</ion-content>

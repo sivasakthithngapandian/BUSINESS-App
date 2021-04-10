@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons>
+      <ion-back-button text=""></ion-back-button>
+    <ion-title>Geomap</ion-title>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <!-- <ion-item>
+    <ion-label>latitude: {{latitude}}</ion-label>   
+  </ion-item>
+  <ion-item> 
+  <ion-label>longitude: {{longitude}}</ion-label>
+</ion-item>-->
+<ion-item>
+ <ion-label>address :</ion-label>
+  <ion-textarea placeholder="Enter your details" [(ngModel)]="address"></ion-textarea>
+  </ion-item>
+
+<ion-item>
+  <ion-button (click)="logout()">Logout</ion-button>
+  </ion-item>
+
+</ion-content>

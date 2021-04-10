@@ -1,0 +1,59 @@
+<ion-app>
+<ion-menu menuId="main-menu" content-id="main">
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+ 
+    <ion-item routerLink="/sales">
+      <ion-icon name="cart-outline" slot="start"></ion-icon>
+      <ion-label>Sales</ion-label></ion-item>
+
+      <ion-item routerLink="/marketing">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-label>Marketing</ion-label></ion-item>
+
+        <ion-item routerLink="/menus/business">
+          <ion-icon name="business-outline" slot="start"></ion-icon>
+          <ion-label>Business profile</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/settings">
+    <ion-icon name="construct-outline" slot="start"></ion-icon>
+    <ion-label>Settings</ion-label>
+  </ion-item>
+
+<ion-item routerLink="/reviews">
+    <ion-icon name="star-half-outline" slot="start"></ion-icon>
+    <ion-label>Reviews & Ratings</ion-label>
+  </ion-item>
+  </ion-list>
+</ion-content>
+<br>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+    <ion-list>
+      <ion-item routerLink="/profile">
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      <ion-label>Public profile</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-list>
+      <ion-item routerLink="/login">    
+    <ion-icon name="power" slot="start"></ion-icon>
+      <ion-label>Logout</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-footer>
+</ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+ 
+
+</ion-app>

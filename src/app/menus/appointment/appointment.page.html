@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button color="light">
+        <ion-icon slot="icon-only" name="calendar"></ion-icon>
+        <ion-back-button text="" slot="start"></ion-back-button>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>
+      {{ currentMonth }}
+    </ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+     
+      <div *ngIf="showAddEvent" class="ion-padding">
+        <ion-item>
+        <ion-input type="text" placeholder="clientname" [(ngModel)]="newEvent.clientname"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input type="text" placeholder="service" [(ngModel)]="newEvent.service"></ion-input>
+        </ion-item>
+           <ion-item>
+          <ion-datetime placeholder="Date" doneText="OK" cancelText="close" i18n displayFormat="DD/MM/YYYY" pickerFormat="MMM D" [(ngModel)]="newEvent.Date" [min]="minDate"></ion-datetime>
+        </ion-item>
+        <ion-item>      
+           <ion-input type="text" placeholder="enter time "  [(ngModel)]="newEvent.time" (click)="open()" ></ion-input>
+        </ion-item>
+ 
+        <ion-button color="success" expand="block" (click)="addEvent()">Add Event</ion-button>
+      </div>
+    <ion-calendar  (click)="event()" [(ngModel)]="Date" *ngIf="!showAddEvent" >
+
+    </ion-calendar>
+    <div class="card">
+    <ion-card *ngFor="let item of today " color="secondary" size="50px">
+      <ion-card-content >
+        {{item.clientname}}
+        {{item.service}}
+        {{item.Date}}
+        {{item.OpeningHours}}
+
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="showHideForm()">
+        <ion-icon *ngIf="!showAddEvent" name="add"></ion-icon>
+        <ion-icon *ngIf="showAddEvent" name="close"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
+  </ion-content>
